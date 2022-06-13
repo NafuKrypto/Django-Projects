@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\playground",
+    "\\playground\\templates",
+    "\\storefront",
+    "\\todos",
+    "\\todos\\migrations",
+    "\\todos\\static",
+    "\\todos\\static\\todos",
+    "\\todos\\templates",
+    "\\todos\\templates\\todos"
+  ],
+  "SelectedNode": "\\todos\\views.py",
+  "PreviewInSolutionExplorer": false
+}
