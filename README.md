@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'chats',
+    'chat',
 ]
 ```
 then go to "TEMPLATES" and add in "DIRS" following thing in settings.py :
@@ -63,4 +63,46 @@ TEMPLATES = [
     },
 ] 
 ```
+**Note: Instead of templates you can use other nams also**
+### 3. url , view 
+root urls.py
+ ```  
+from django.contrib import admin
+from django.urls import path , include
 
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('chat.urls')), #for main url path
+]
+```
+create urls.py in chat app folder
+chat>urls.py
+
+ ```
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('',views.home,name="home"),
+]
+
+ ```
+chat>views.py
+
+ ```
+ from django.shortcuts import render
+
+# Create your views here.
+
+def home(request):
+
+    return render(request,'home.html')
+ ```
+ 
+ Now run 
+ 
+  ```
+  (env) D:\..... djangochat:  python manage.py runserver
+  ```
+  
+  Results :  displays home.html
