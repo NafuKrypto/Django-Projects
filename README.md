@@ -111,4 +111,7 @@ def home(request):
   (env) D:\..... djangochat:  python manage.py runserver
   ```
   
-  Results :  displays home.html
+ ** Results :  displays home.html**
+  
+ ### Set up Model 
+ 
