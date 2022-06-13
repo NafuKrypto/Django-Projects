@@ -31,3 +31,36 @@ sub one build with python manage.py
 ``` 
 python manage.py startapp chat
 ```
+### 3. Templates
+create "templates" folder in root directory. then got to settings.py and add 'chats' in 'Installed Apps"
+``` 
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'chats',
+]
+```
+then go to "TEMPLATES" and add in "DIRS" following thing in settings.py :
+
+``` 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [BASE_DIR/'templates'],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+] 
+```
+
