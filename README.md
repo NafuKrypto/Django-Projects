@@ -16,6 +16,12 @@ python -m venv env
 ```
 env\SCripts\activate
 ```
+Install django
+
+```
+(env) pip install django
+
+```
 root one builds with django admin
 
 ```
