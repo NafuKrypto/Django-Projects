@@ -12,10 +12,11 @@ pip install virtualenv venv
 ```
 python -m venv env
 ```
-### 1. Create Django App
+### 1. Create Django root App
 ```
 env\SCripts\activate
 ```
+root one builds with django admin
 
 ```
 django-admin startproject django-chat
@@ -24,4 +25,9 @@ Run and see
 ```
 cd django-chat
 python manage.py runserver
+```
+### 2. Create Django chat App
+sub one build with python manage.py 
+``` 
+python manage.py startapp chat
 ```
